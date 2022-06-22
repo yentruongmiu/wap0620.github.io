@@ -1,6 +1,63 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14rem;
-  font-weight: 600;
-  background-color: rgba(0,255,255, 0.3);
+  font-size: 1.2em;
+  font-weight: 400;
+  background-color: rgba(85, 84, 83, 0.7);
+  margin: 0;
+  padding: 0;
+}
+div, h1, h2 {
+  padding: 0 10px;
+  display: block;
+  width: 99%;
+}
+.header {
+  background-image: url("../images/nature-header.jpeg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 300px;
+  text-align: center;
+}
+.header h1 {
+  padding-top: 35px;
+  font-size: 3em;
+  font-weight: 800;
+  color: #00ffff;
+}
+.header p {
+  color: rgb(52, 52, 131);
+  text-align: center;
+}
+h2 {
+  font-size: 1.8em;
+  color: #00ffff;
+  padding: 10px 10px;
+}
+.effected-word {
+  font-style: italic;
+  color: #FF4400;
+}
+ul li, ol li {
+  line-height: 1.5em;
+}
+ol li a {
+  color: #ff0000;
+}
+.italic {
+  font-style: italic;
+}
+.moods {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.moods div {
+  width: 48%;
+  margin: 0 1%;
+}
+.moods div img {
+  width: 500px;
+}
+img.validator {
+  width: 200px;
 }
