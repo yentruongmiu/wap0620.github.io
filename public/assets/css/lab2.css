@@ -2,14 +2,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   font-weight: 400;
-  background-color: rgba(85, 84, 83, 0.7);
+  /* background-color: rgba(85, 84, 83, 0.7); */
   margin: 0;
   padding: 0;
 }
 div, h1, h2 {
-  padding: 0 10px;
+  padding: 0;
+  margin: 0;
   display: block;
-  width: 99%;
 }
 .header {
   background-image: url("../images/nature-header.jpeg");
@@ -17,6 +17,8 @@ div, h1, h2 {
   background-repeat: no-repeat;
   height: 300px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 .header h1 {
   padding-top: 35px;
@@ -31,7 +33,7 @@ div, h1, h2 {
 h2 {
   font-size: 1.8em;
   color: #00ffff;
-  padding: 10px 10px;
+  padding: 35px 15px;
 }
 .effected-word {
   font-style: italic;
@@ -54,6 +56,10 @@ ol li a {
 .moods div {
   width: 48%;
   margin: 0 1%;
+}
+.moods span {
+  font-size: 1.5em;
+  line-height: 2em;
 }
 .moods div img {
   width: 500px;
