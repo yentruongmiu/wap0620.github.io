@@ -37,6 +37,9 @@ h2 {
   color: #00ffff;
   padding: 35px 15px;
 }
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
 .effected-word {
   font-style: italic;
   color: #FF4400;
@@ -44,8 +47,49 @@ h2 {
 ul li, ol li {
   line-height: 1.5em;
 }
+ul li::first-letter, ol li::first-letter {
+  font-family: Georgia;
+  font-size: 1.8em;
+  line-height: 60px;
+  padding: 4px 4px 3px 0;
+}
+
 ol li a {
   color: #ff0000;
+}
+ol > li > ul {
+  list-style-type: none;
+}
+ol>li>ul>li{
+  font-size: 0.8em;
+}
+ol > li > ul > li::first-letter {
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 0;
+  font-family: Arial,
+    Helvetica,
+    sans-serif;
+}
+ol > li > ul > li:first-child::before {
+  content: "Director ";
+  color: yellow;
+}
+ol>li>ul>li:nth-child(2)::before {
+  content: "Genre ";
+  color: yellow;
+}
+ol>li>ul>li:nth-child(3)::before {
+  content: "Tagline ";
+  color: yellow;
+}
+ol>li>ul>li:nth-child(4)::before {
+  content: "Plot Outline ";
+  color: yellow;
+}
+ol>li>ul>li>p{
+  color: #fff;
+  margin-left: 30px;
 }
 .italic {
   font-style: italic;
