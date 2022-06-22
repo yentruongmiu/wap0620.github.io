@@ -56,7 +56,6 @@ ul li::first-letter, ol li::first-letter {
   line-height: 60px;
   padding: 4px 4px 3px 0;
 }
-
 ol li a {
   color: #ff0000;
 }
@@ -76,19 +75,19 @@ ol > li > ul > li::first-letter {
 }
 ol > li > ul > li:first-child::before {
   content: "Director ";
-  color: yellow;
+  color: blue;
 }
 ol>li>ul>li:nth-child(2)::before {
   content: "Genre ";
-  color: yellow;
+  color: blue;
 }
 ol>li>ul>li:nth-child(3)::before {
   content: "Tagline ";
-  color: yellow;
+  color: blue;
 }
 ol>li>ul>li:nth-child(4)::before {
   content: "Plot Outline ";
-  color: yellow;
+  color: blue;
 }
 ol>li>ul>li>p{
   color: #000;
