@@ -3,6 +3,8 @@ body {
   font-size: 1.2em;
   font-weight: 400;
   /* background-color: rgba(85, 84, 83, 0.7); */
+  /* background-image: url("../images/background.webp");
+  background-repeat: repeat; */
   margin: 0;
   padding: 0;
 }
