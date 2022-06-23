@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab 3: My Shopping Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/7ebad0fa93.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/assets/css/lab3.css" type="text/css" >
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="./lab2.html">
+          <img src="./public/assets/images/yt_logo2.png" alt="My Logo" width="120px" />
+        </a> 
+        <div class="welcome">Welcome, Thi Hong Yen Truong</div>
+        <div class="btn">
+          <a href="./index.html">Logout</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="product">
+          <p>Product list</p>
+
+          <div class="grid">
+            <div class="row">
+              <div class="head cell col4">Name</div>
+              <div class="head cell col4">Price</div>
+              <div class="head cell col4">Stock</div>
+              <div class="head cell col4">Actions</div>
+            </div>
+            <div class="row">
+              <div class="cell col4">Nodejs</div>
+              <div class="cell col4 number">9.99</div>
+              <div class="cell col4 number">8</div>
+              <div class="cell col4">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell col4">React</div>
+              <div class="cell col4 number">19.99</div>
+              <div class="cell col4 number">5</div>
+              <div class="cell col4">icon</div>
+            </div>
+            <div class="row">
+              <div class="cell col4">Angular</div>
+              <div class="cell col4 number">29.99</div>
+              <div class="cell col4 number">15</div>
+              <div class="cell col4">icon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart">
+          <p>Your shopping cart</p>
+
+          <div class="grid">
+            <div class="row">
+              <div class="head cell col4">Name</div>
+              <div class="head cell col4">Price</div>
+              <div class="head cell col4">Total</div>
+              <div class="head cell col4">Quantity</div>
+            </div>
+            <div class="row">
+              <div class="cell col4">Nodejs</div>
+              <div class="cell col4 number">9.99</div>
+              <div class="cell col4 number">9.99</div>
+              <div class="cell col4">input(1)</div>
+            </div>
+            <div class="row">
+              <div class="cell col4">Angular</div>
+              <div class="cell col4 number">29.99</div>
+              <div class="cell col4 number">299.9</div>
+              <div class="cell col4">input(10)</div>
+            </div>
+            <div class="row">
+              <div class="cell col1 right">Total: 309.89</div>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="btn">
+              <a href="#">Place order</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
