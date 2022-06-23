@@ -10,7 +10,8 @@ function increaseQuantity(el) {
     input.val(val);
     //recalculate total price
     const price = parseFloat($(el).parent().parent().find(".unitPrice").text());
-    $(el).parent().parent().find(".totalPrice").text(calcTotalPrice(price, val));
+    calcTotalPrice(price, "+");
+    $(el).parent().parent().find(".totalPrice").text(calcItemTotalPrice(price, val));
   }
 }
 
@@ -22,10 +23,21 @@ function decreaseQuantity(el) {
     input.val(val);
     //recalculate total price
     const price = parseFloat($(el).parent().parent().find(".unitPrice").text());
-    $(el).parent().parent().find(".totalPrice").text(calcTotalPrice(price, val));
+    calcTotalPrice(price, "-");
+    $(el).parent().parent().find(".totalPrice").text(calcItemTotalPrice(price, val));
   }
 }
 
-function calcTotalPrice(price, qtt) {
+function calcItemTotalPrice(price, qtt) {
   return price * qtt;
+}
+
+function calcTotalPrice(price, operate) {
+  let total = parseFloat($("#total").text());
+  if (operate == '+') {
+    total += price;
+  } else {
+    total -= price;
+  }
+  $("#total").text(total);
 }

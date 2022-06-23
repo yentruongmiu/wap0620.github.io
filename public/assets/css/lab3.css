@@ -131,3 +131,8 @@ a, a:visited {
   color: red;
   font-size: 0.8em;
 }
+#total {
+  font-size: 1.2em;
+  font-weight: normal;
+  float: none;
+}
