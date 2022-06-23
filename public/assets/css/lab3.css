@@ -126,3 +126,8 @@ a, a:visited {
   align-items: center;
   justify-content: center;
 }
+.italic {
+  font-style: italic;
+  color: red;
+  font-size: 0.8em;
+}
