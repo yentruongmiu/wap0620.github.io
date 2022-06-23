@@ -3,12 +3,115 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Lab 4: Workshop Registration</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./public/assets/css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/7ebad0fa93.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/assets/css/lab4.css" type="text/css">
   </head>
   <body>
-    
+    <div class="page">
+      <div class="header">
+        <span class="sitename">Workshop Registration</span>
+        <ul>
+          <li>More Actions <i class="fas fa-caret-down"></i></li>
+          <li>Action 1</li>
+          <li>Action 2</li>
+          <li>Action 3</li>
+        </ul>
+        <!-- <select name="actions">
+          <option>More Actions</option>
+          <option>Action 1</option>
+          <option>Action 2</option>
+          <option>Action 3</option>
+        </select> -->
+      </div>
+      <div class="container">
+        <div class="col2">
+          <p class="notice">Register now while seats are available!</p>
+          <div class="row">
+            <label for="firsname">First Name <sup>*</sup></label>
+            <input type="text" name="firstname" />
+          </div>
+          <div class="row">
+            <label for="lastname">Last Name <sup>*</sup></label>
+            <input type="text" name="lastname" />
+          </div>
+          <div class="row">
+            <label for="company">Company/Institution <sup>*</sup></label>
+            <input type="text" name="company" />
+          </div>
+          <div class="row">
+            <label for="address">Address <sup>*</sup></label>
+            <textarea rows="4"></textarea>
+          </div>
+          <div class="row">
+            <label for="city">City</label>
+            <input type="text" name="city" />
+          </div>
+          <div class="row">
+            <label for="state">State / Province / Region</label>
+            <select name="state">
+              <option>--Select--</option>
+              <option value=1>Iowa</option>
+              <option value=2>California</option>
+              <option value=3>NewYork</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="country">Country</label>
+            <select name="country">
+              <option>--Select--</option>
+              <option value=1>The US</option>
+              <option value=2>Vietnam</option>
+              <option value=3>China</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="email">Email <sup>*</sup></label>
+            <input type="text" name="email" />
+          </div>
+          <div class="row">
+            <label for="phone">Phone Number <sup>*</sup></label>
+            <input type="text" name="phone" />
+          </div>
+        </div>
+
+        <div class="col2">
+          <p class="notice">Lunch</p>
+          <div class="row">
+            <label for="mealPref">Meal Preference</label>
+            <select name="mealPref">
+              <option value=1>Vegetarian</option>
+              <option value=2>Option 2</option>
+              <option value=3>Option 3</option>
+            </select>
+          </div>
+          <p class="notice">Payment Details</p>
+          <div class="row">
+            <label for="payment">Payment Mode</label>
+            <input type="checkbox" name="cash" />
+            <input type="checkbox" name="Cheque" />
+            <input type="checkbox" name="Demand Draft" />
+          </div>
+          <div class="row">
+            <label for="paymentNo">DD/Cheque No.</label>
+            <input type="text" name="paymentNo" />
+          </div>
+          <div class="row">
+            <label for="bank">Drawn On (Bank Name)</label>
+            <input type="text" name="bank" />
+          </div>
+          <div class="row">
+            <label for="payable">Payable at</label>
+            <input type="text" name="payable" />
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <input type="submit" name="submit" value="Submit" class="btn" />
+        <input type="button" name="reset" value="Reset" class="btn" />
+      </div>
+    </div>
   </body>
 </html>

@@ -27,71 +27,73 @@
       </div>
 
       <div class="content">
-        <div class="product">
+        <div>
           <p>Product list</p>
 
           <div class="grid">
             <div class="row">
-              <div class="head cell col4">Name</div>
-              <div class="head cell col4">Price</div>
-              <div class="head cell col4">Stock</div>
-              <div class="head cell col4">Actions</div>
+              <div class="head cell">Name</div>
+              <div class="head cell">Price</div>
+              <div class="head cell">Stock</div>
+              <div class="head cell">Actions</div>
             </div>
             <div class="row">
-              <div class="cell col4">Nodejs</div>
-              <div class="cell col4 number">9.99</div>
-              <div class="cell col4 number">8</div>
-              <div class="cell col4">
+              <div class="cell">Nodejs</div>
+              <div class="cell number">9.99</div>
+              <div class="cell number">8</div>
+              <div class="cell">
                 <i class="fas fa-shopping-cart" title="Add to cart"></i>
               </div>
             </div>
             <div class="row">
-              <div class="cell col4">React</div>
-              <div class="cell col4 number">19.99</div>
-              <div class="cell col4 number">5</div>
-              <div class="cell col4">
+              <div class="cell">React</div>
+              <div class="cell number">19.99</div>
+              <div class="cell number">5</div>
+              <div class="cell">
                 <i class="fas fa-shopping-cart" title="Add to cart"></i>
               </div>
             </div>
             <div class="row">
-              <div class="cell col4">Angular</div>
-              <div class="cell col4 number">29.99</div>
-              <div class="cell col4 number">15</div>
-              <div class="cell col4">
+              <div class="cell">Angular</div>
+              <div class="cell number">29.99</div>
+              <div class="cell number">15</div>
+              <div class="cell">
                 <i class="fas fa-shopping-cart" title="Add to cart"></i>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="cart">
+        <div>
           <p>Your shopping cart <span class="italic">(The maximum quantity of each item is 10)</span></p>
 
           <div class="grid">
             <div class="row">
-              <div class="head cell col4">Name</div>
-              <div class="head cell col4">Price</div>
-              <div class="head cell col4">Total</div>
-              <div class="head cell col4">Quantity</div>
+              <div class="head cell">Name</div>
+              <div class="head cell">Price</div>
+              <div class="head cell">Total</div>
+              <div class="head cell">Quantity</div>
             </div>
             <div class="row">
-              <div class="cell col4">Nodejs</div>
-              <div class="cell col4 number unitPrice">9.99</div>
-              <div class="cell col4 number totalPrice">9.99</div>
-              <div class="cell col4 center">
+              <div class="cell">Nodejs</div>
+              <div class="cell number unitPrice">9.99</div>
+              <div class="cell number totalPrice">9.99</div>
+              <div class="cell center">
                 <span title="Decrease" onClick="decreaseQuantity(this);">- </span><input type="number" value=1 /><span title="Increase" onClick="increaseQuantity(this);"> +</span>
               </div>
             </div>
             <div class="row">
-              <div class="cell col4">Angular</div>
-              <div class="cell col4 number unitPrice">29.99</div>
-              <div class="cell col4 number totalPrice">299.9</div>
-              <div class="cell col4 center">
+              <div class="cell">Angular</div>
+              <div class="cell number unitPrice">29.99</div>
+              <div class="cell number totalPrice">299.9</div>
+              <div class="cell center">
                 <span title="Decrease" onClick="decreaseQuantity(this);">- </span><input type="number" value=10 /><span title="Increase" onclick="increaseQuantity(this);"> +</span>
               </div>
             </div>
             <div class="row">
-              <div class="cell col1 right" >Total: <span id="total">309.89</span></div>
+              <div class="cell-total"></div>
+              <div class="cell-total"></div>
+              <div class="cell-total center" >Total: <span id="total">309.89</span></div>
             </div>
           </div>
 
