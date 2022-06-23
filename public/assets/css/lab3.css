@@ -31,6 +31,9 @@ input {
 .header a, .header .welcome, .header .status {
   margin: 10px;
 }
+.header img {
+  width: 120px;
+}
 .header .welcome {
   width: calc(100% - 100px - 100px - 80px);
   font-size: 1.8em;
