@@ -9,6 +9,9 @@ body {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+i {
+  cursor: pointer;
+}
 .container {
   width: 90%;
   margin: 20px auto;
