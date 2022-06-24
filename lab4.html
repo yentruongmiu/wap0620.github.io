@@ -8,16 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/7ebad0fa93.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./public/assets/css/lab4.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function changeIcon(el, type) {
+        if(type == "over") {
+          $(el).find("i").removeClass("fa-caret-down")
+            .addClass("fa-caret-up");
+        }
+        else {
+          $(el).find("i").removeClass("fa-caret-up")
+            .addClass("fa-caret-down");
+        }
+          
+      }
+    </script>
   </head>
   <body>
     <div class="page">
       <div class="header">
         <span class="sitename">Workshop Registration</span>
-        <ul>
-          <li>More Actions <i class="fas fa-caret-down"></i></li>
-          <li>Action 1</li>
-          <li>Action 2</li>
-          <li>Action 3</li>
+        <ul class="actions">
+          <li><a href="javascript:void(0);" onmouseover="changeIcon(this, 'over');" onmouseleave="changeIcon(this,'leave');">More Actions <i class="fas fa-caret-down"></i></a>
+            <ul>
+              <li><a href="./index.html">Home page</a></li>
+              <li><a href="./lab2.html">About Me</a></li>
+              <li><a href="./lab3.html">My Shopping Cart</a></li>
+            </ul>
+          </li>
         </ul>
         <!-- <select name="actions">
           <option>More Actions</option>
@@ -26,92 +44,105 @@
           <option>Action 3</option>
         </select> -->
       </div>
-      <div class="container">
-        <div class="col2">
-          <p class="notice">Register now while seats are available!</p>
-          <div class="row">
-            <label for="firsname">First Name <sup>*</sup></label>
-            <input type="text" name="firstname" />
+      <form action="./lab4.html" method="get" >
+        <div class="container">
+          <div class="col2">
+            <p class="notice">Register now while seats are available!</p>
+            <div class="row">
+              <label for="firsname">First Name <sup>*</sup></label>
+              <input type="text" name="firstname" required />
+            </div>
+            <div class="row">
+              <label for="lastname">Last Name <sup>*</sup></label>
+              <input type="text" name="lastname" required />
+            </div>
+            <div class="row">
+              <label for="company">Company / Institution <sup>*</sup></label>
+              <input type="text" name="company" required />
+            </div>
+            <div class="row">
+              <label for="address">Address <sup>*</sup></label>
+              <textarea rows="4" required ></textarea>
+            </div>
+            <div class="row">
+              <label for="city">City</label>
+              <input type="text" name="city" />
+            </div>
+            <div class="row">
+              <label for="state">State / Province / Region</label>
+              <select name="state">
+                <option>--Select--</option>
+                <option value="US-IA">Iowa</option>
+                <option value="US-CA">California</option>
+                <option value="US-NY">NewYork</option>
+                <option value="VN-LA">Long An</option>
+                <option value="VN-QT">Quang Tri</option>
+                <option value="VN-LS">Lang Son</option>
+                <option value="CN-GD">Guangdong</option>
+                <option value="CN-FJ">Fujian</option>
+                <option value="CN-GZ">Guizhou</option>
+              </select>
+            </div>
+            <div class="row">
+              <label for="country">Country</label>
+              <select name="country">
+                <option>--Select--</option>
+                <option value="US">The US</option>
+                <option value="VN">Vietnam</option>
+                <option value="CN">China</option>
+              </select>
+            </div>
+            <div class="row">
+              <label for="email">Email <sup>*</sup></label>
+              <input type="text" name="email" required pattern="^[a-z0-9._+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}$" />
+            </div>
+            <div class="row">
+              <label for="phone">Phone Number <sup>*</sup></label>
+              <input type="text" name="phone" required pattern="[1-9]{3}\-\d{3}\-\d{4}" />
+            </div>
           </div>
-          <div class="row">
-            <label for="lastname">Last Name <sup>*</sup></label>
-            <input type="text" name="lastname" />
-          </div>
-          <div class="row">
-            <label for="company">Company/Institution <sup>*</sup></label>
-            <input type="text" name="company" />
-          </div>
-          <div class="row">
-            <label for="address">Address <sup>*</sup></label>
-            <textarea rows="4"></textarea>
-          </div>
-          <div class="row">
-            <label for="city">City</label>
-            <input type="text" name="city" />
-          </div>
-          <div class="row">
-            <label for="state">State / Province / Region</label>
-            <select name="state">
-              <option>--Select--</option>
-              <option value=1>Iowa</option>
-              <option value=2>California</option>
-              <option value=3>NewYork</option>
-            </select>
-          </div>
-          <div class="row">
-            <label for="country">Country</label>
-            <select name="country">
-              <option>--Select--</option>
-              <option value=1>The US</option>
-              <option value=2>Vietnam</option>
-              <option value=3>China</option>
-            </select>
-          </div>
-          <div class="row">
-            <label for="email">Email <sup>*</sup></label>
-            <input type="text" name="email" />
-          </div>
-          <div class="row">
-            <label for="phone">Phone Number <sup>*</sup></label>
-            <input type="text" name="phone" />
-          </div>
-        </div>
 
-        <div class="col2">
-          <p class="notice">Lunch</p>
-          <div class="row">
-            <label for="mealPref">Meal Preference</label>
-            <select name="mealPref">
-              <option value=1>Vegetarian</option>
-              <option value=2>Option 2</option>
-              <option value=3>Option 3</option>
-            </select>
-          </div>
-          <p class="notice">Payment Details</p>
-          <div class="row">
-            <label for="payment">Payment Mode</label>
-            <input type="checkbox" name="cash" />
-            <input type="checkbox" name="Cheque" />
-            <input type="checkbox" name="Demand Draft" />
-          </div>
-          <div class="row">
-            <label for="paymentNo">DD/Cheque No.</label>
-            <input type="text" name="paymentNo" />
-          </div>
-          <div class="row">
-            <label for="bank">Drawn On (Bank Name)</label>
-            <input type="text" name="bank" />
-          </div>
-          <div class="row">
-            <label for="payable">Payable at</label>
-            <input type="text" name="payable" />
+          <div class="col2">
+            <div class="row">&nbsp;</div>
+            <p class="notice">Lunch</p>
+            <div class="row">
+              <label for="mealPref">Meal Preference</label>
+              <select name="mealPref">
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Bland meal">Bland meal</option>
+                <option value="Low calorie">Low calorie</option>
+                <option value="Low sodium">Low sodium</option>
+                <option value="Nonlactose">Nonlactose</option>
+              </select>
+            </div>
+            <p class="notice">Payment Details</p>
+            <div class="row">
+              <label for="payment">Payment Mode</label>
+              <div class="column">
+                <label><input type="checkbox" name="cash" /> Cash</label>
+                <label><input type="checkbox" name="Cheque" /> Cheque</label>
+                <label><input type="checkbox" name="Demand Draft" /> Demand Draft</label>
+              </div>
+            </div>
+            <div class="row">
+              <label for="paymentNo">DD / Cheque No.</label>
+              <input type="text" name="paymentNo" />
+            </div>
+            <div class="row">
+              <label for="bank">Drawn On (Bank Name)</label>
+              <input type="text" name="bank" />
+            </div>
+            <div class="row">
+              <label for="payable">Payable at</label>
+              <input type="text" name="payable" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer">
-        <input type="submit" name="submit" value="Submit" class="btn" />
-        <input type="button" name="reset" value="Reset" class="btn" />
-      </div>
+        <div class="footer">
+          <input type="submit" name="submit" value="Submit" class="btn" />
+          <input type="reset" name="reset" value="Reset" class="btn" />
+        </div>
+      </form>
     </div>
   </body>
 </html>

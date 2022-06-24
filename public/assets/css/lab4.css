@@ -13,25 +13,60 @@ body {
   border: 1px solid #a2cbbc;
   display: flex;
   flex-direction: column;
-  /* overflow-x: hidden;*/
 }
 .header {
   height: 40px;
   padding: 10px;
   background-color: #a2cbbc;
+  display: flex;
+  flex-direction: row;
 }
 .header .sitename {
   font-size: 1.4em;
   font-weight: bold;
 }
-ul {
-  display: inline;
+.actions {
+  list-style: none inside;
+  margin: 5px 0 0;
+  text-align: center;
+  display: block;
   list-style-type: none;
 }
-ul li {
-  display:inline-block;
-  border-left: 1px solid #424836;
+.actions li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #24af15;
 }
+.actions li a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  width: 200px;
+  line-height: 35px;
+  color: #fff;
+}
+
+.actions li:hover {
+  background: #3eb589;
+}
+.actions ul {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  display: none;
+}
+/* .actions li:hover ul ul {
+  display: none;
+} */
+.actions li:hover ul {
+  display: block;
+}
+/* .actions li li:hover ul {
+  display: block;
+  margin-left: 200px;
+  margin-top: -35px;
+} */
 .container {
   margin: 20px 0 30px;
   display: flex;
@@ -40,15 +75,14 @@ ul li {
 }
 .col2 {
   flex-wrap: nowrap;
-  margin: 0 10px;
-  width: calc((100% - 80px)/2);
+  flex: 1;
+  padding: 0 10px;
   /* border: 1px solid #000; */
   display: flex;
   flex-direction: column;
 }
 .col2 + .col2 {
-  /* padding-left: 20px; */
-  float: right;
+  padding-left: 50px;
 }
 .notice {
   font-size: 0.8em;
@@ -56,16 +90,46 @@ ul li {
 }
 .row {
   display: flex;
+  flex-direction: row;
+}
+.row > * {
+  flex-wrap: nowrap;
+  flex: 1;
+  margin: 10px 0;
+}
+.column {
+  display: flex;
   flex-direction: column;
-  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 0 -20px;
+}
+.column > * {
+  flex-wrap: nowrap;
+  flex: 1;
+  margin: 10px 0;
 }
 label {
   font-weight: bold;
-  width: calc((100%/3)*2 - 10px);
-
+}
+input, select {
+  height: 25px;
+  padding: 2px 5px;
+}
+textarea {
+  padding: 2px 5px;
 }
 label sup {
   color: red;
+}
+.column label {
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: -4px 0;
+}
+.column label input {
+  height: 20px;
+  margin: 4px 2px;
+  padding: 0;
 }
 .footer {
   height: 40px;
