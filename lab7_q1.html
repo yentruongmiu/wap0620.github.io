@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script>
+      function askPassword(ok, fail) {
+          let password = prompt("Password?", '');
+          if (password == "rockstar") ok();
+          else fail();
+      }
+
+      let user = {
+        name: 'John',
+        loginOk() {
+          console.log(this);
+          alert(`${this.name} logged in`);
+        },
+        loginFail() {
+          console.log(this);
+          alert(`${this.name} failed to log in`);
+        },
+      };
+
+      //askPassword(user.loginOk, user.loginFail);
+      //error because 'this' does not refer to user object, but refer to global window 
+
+      //using wrapper
+      //askPassword(() => { user.loginOk(); }, () => { user.loginFail(); });
+      
+      //using bind
+      //askPassword.bind(user, () => user.loginOk(), () => user.loginFail() )();
+      
+      //using call
+      //askPassword.call(user, () => user.loginOk(), () => user.loginFail());
+      
+      //using apply
+      askPassword.apply(user, [() => user.loginOk(), () => user.loginFail()]);
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
