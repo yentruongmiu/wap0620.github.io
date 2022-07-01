@@ -20,6 +20,8 @@ let rabbit = {
         console.log('Sleeping!');
     }
 };
-
+//console.log(rabbit);
 rabbit = Object.create(animal);
+//console.log(rabbit.__proto__);
 animal.eat = true;
+//console.log(rabbit.__proto__);
