@@ -44,19 +44,19 @@ let group = {
 
 //call
 
-// let group = {
-//   title: "Our Group",
-//   students: ["John", "Pete", "Alice"],
-//   showList: function () {
-//     const print = function (stu) {
-//       console.log(this.title + ": " + stu);
-//     };
-//     this.students.forEach((stu) => print.call(this, stu));
-//     // this.students.forEach((student) => function() {
-//     //   console.log(this.title + ": " + student);
-//     // }.call(this));
-//   }
-// };
+let group2 = {
+  title: "Our Group",
+  students: ["John", "Pete", "Alice"],
+  showList: function () {
+    const print = function (stu) {
+      console.log(this.title + ": " + stu);
+    };
+    this.students.forEach((stu) => print.call(this, stu));
+    // this.students.forEach((student) => function() {
+    //   console.log(this.title + ": " + student);
+    // }.call(this));
+  }
+};
 
 
 //apply
