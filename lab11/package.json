@@ -1,0 +1,15 @@
+{
+  "name": "lab11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "question1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thi Hong Yen Truong",
+  "license": "ISC",
+  "dependencies": {
+    "dns": "^0.2.2",
+    "nodemon": "^2.0.19"
+  }
+}
