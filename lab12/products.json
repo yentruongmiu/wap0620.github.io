@@ -1,0 +1,17 @@
+[{
+  "id": 1,
+  "name": "Running shoes",
+  "manufacture": "Adidas"
+}, {
+  "id": 2,
+  "name": "Backbag",
+  "manufacture": "Amazon"
+}, {
+  "id": 3,
+  "name": "Clothes",
+  "manufacture": "Amazon"
+}, {
+  "id": 4,
+  "name": "Wood Table",
+  "manufacture": "Table company"
+}]

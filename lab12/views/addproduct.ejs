@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab 12: Add product page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Add new product</h1>
+    </div>
+    
+    <div class="container">
+      <form method="post" action="/products/save">
+        <div class="row">
+          <div class="col">
+            <label for="name">Name</label>
+          </div>
+          <div class="col">
+            <input type="text" id="name" name="name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="manufacture">Manufacture</label>
+          </div>
+          <div class="col">
+            <input type="text" id="manufacture" name="manufacture" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="submit" value="Add Product" />
+          </div>
+          <div class="col">
+            <input type="reset" value="Reset" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a href="/">Back to home page</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab 12: Product management</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Product Management</h1>
+    </div>
+    <div class="container">
+      <table>
+        <caption>List of product</caption>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Manufacture</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <% products.forEach(p => { %>
+          <tr>
+            <td><%= p.id %></td>
+            <td><%= p.name %></td>
+            <td><%= p.manufacture %></td>
+            <td><a href="javascript:void(0);" title="Do not support">Delete</a></td>
+          </tr>
+        <% }) %>
+        
+      </table>
+
+      <div class="actions">
+        <a href="/">Back to home page</a>
+        <a href="/products/add">
+          Add new product
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="copyright">&copy; Copyright by Thi Truong</span>
+    </div>
+  </body>
+</html>

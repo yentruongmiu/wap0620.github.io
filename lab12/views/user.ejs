@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab 11: User management</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>User Management</h1>
+    </div>
+    
+    <div class="container">
+      <table>
+        <caption>List of user</caption>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <% users.forEach(user => { %> 
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.address %></td>
+            <td><a href="javascript:void(0);" title="Do not support">Delete</a></td>
+          </tr>
+        <%})%>
+      </table>
+      <div class="actions">
+        <a href="/">Back to home page</a>
+        <a href="/users/add">
+          Add new user
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="copyright">&copy; Copyright by Thi Truong</span>
+    </div>
+  </body>
+</html>
