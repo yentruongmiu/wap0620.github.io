@@ -11,13 +11,13 @@ exports.getBookById = (req, res, next) => {
 
 exports.save = (req, res, next) => {
   const book = req.body;
-  const savedBook = new Book(null, book.title, book.ISBN, book.publishedDate, book.author).save();
+  const savedBook = new Book(null, book.title, book.isbn, book.publishedDate, book.author).save();
   res.status(201).json(savedBook);
 }
 
 exports.update = (req, res, next) => {
   const book = req.body;
-  const updatedBook = new Book(req.params.bookId, book.title, book.ISBN, book.publishedDate, book.author).update();
+  const updatedBook = new Book(req.params.bookId, book.title, book.isbn, book.publishedDate, book.author).update();
   res.status(200).json(updatedBook);
 }
 

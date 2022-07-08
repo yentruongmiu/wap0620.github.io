@@ -2,11 +2,11 @@ let books = [];
 let counter = 0;
 
 module.exports = class Book {
-  constructor(id, title, ISBN, publishedDate, author) {
-    //id, title, ISBN, publishedDate, author
+  constructor(id, title, isbn, publishedDate, author) {
+    //id, title, isbn, publishedDate, author
     this.id = id;
     this.title = title;
-    this.ISBN = ISBN;
+    this.isbn = isbn;
     this.publishedDate = publishedDate;
     this.author = author;
   }
@@ -44,7 +44,7 @@ module.exports = class Book {
   static deleteById(bookId) {
     const index = books.findIndex(b => b.id == bookId);
     if (index > -1) {
-        books = books.filter(b => b.id != bookId);
+      books = books.filter(b => b.id != bookId);
     } else {
         throw new Error('NOT Found');
     }
