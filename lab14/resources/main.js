@@ -8,7 +8,7 @@ window.onload = function() {
 
     // add/update book
     document.getElementById('book-btn').onclick = function(event) {
-        event.preventDefault();
+        //event.preventDefault();
         if (!document.getElementById('book-btn').dataset.id) {
             addBook();
         } else {
