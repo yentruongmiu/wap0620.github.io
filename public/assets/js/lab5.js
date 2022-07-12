@@ -8,7 +8,7 @@ Use Array Methods: filter, map, reduce, etc to implement functions below:
 function sum(arr) {
   let sum = arr.reduce(function(item, current) {
     return item + current;
-  });
+  }, 0);
   return sum;
 }
 
