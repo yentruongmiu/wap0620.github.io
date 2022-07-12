@@ -1,0 +1,19 @@
+[
+  {
+    "bookId": 1,
+    "title": "Node.js",
+    "author": {
+      "authorId": 303,
+      "firstname": "Edward",
+      "lastname": "Jack"
+    }
+  }, {
+    "bookId": 2,
+    "title": "Angular",
+    "author": {
+      "authorId": 308,
+      "firstname": "John",
+      "lastname": "Smith"
+    }
+  }
+]

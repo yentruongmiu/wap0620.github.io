@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      window.onload = function() {
+        fetch('http://localhost:3000/books')
+        .then(res => res.json())
+        .then(books => {
+          if(books && !books.error) {
+            const tbody = document.getElementById('books');
+            if(books.length) {
+              books.forEach(book => {
+                const row = document.createElement('tr');
+                const tdId = document.createElement('td');
+                tdId.innerHTML = book.bookId;
+                row.appendChild(tdId);
+                const tdTitle = document.createElement('td');
+                tdTitle.innerHTML = book.title;
+                row.appendChild(tdTitle);
+                const tdAuthor = document.createElement('td');
+                tdAuthor.innerHTML = book.author.firstname + ' ' + book.author.lastname;
+                row.appendChild(tdAuthor);
+                tbody.appendChild(row);
+              });
+            }
+          } else {
+            alert(books.error);
+          }
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <h1>All books</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Author's fullname</th>
+        </tr>
+      </thead>
+      <tbody id="books"></tbody>
+    </table>
+  </body>
+</html>
